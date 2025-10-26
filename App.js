@@ -1,15 +1,15 @@
-import { NavigationContainer } from '@react-navigation/native'
-import React from 'react'
-import RootStack from './screens/RootStack'
-import LogContext from './contexts/LogContext';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import RootStack from './screens/RootStack';
+import { LogContextProvider } from './contexts/LogContext';
 
 function App() {
   return (
   <NavigationContainer>
-    <LogContext.Provider value='테스트입니다.'>
+    <LogContextProvider>
     <RootStack />  
-    </LogContext.Provider>
+    </LogContextProvider>
   </NavigationContainer>
   );
 }
-export default App
+export default App;
